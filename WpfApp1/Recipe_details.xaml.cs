@@ -144,7 +144,7 @@ namespace WpfApp1
 		{
 			SqlConnection sqlCon = new SqlConnection(connection);
 			sqlCon.Open();
-			string query = $"delete from Recipes where ID = {Recipe_ID}";
+			string query = $"delete from Ingedients where Recipe_ID = {Recipe_ID}; delete from Recipes where ID = {Recipe_ID}";
 			SqlCommand command = new SqlCommand(query, sqlCon);
 			command.ExecuteNonQuery();
 
