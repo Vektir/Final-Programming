@@ -5,21 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Recipe_details" Height="844" Width="390">
+        Title="Recipe_details" Height="884" Width="390">
     <Grid Background="Purple">
-        <Image Source="C:\Users\viktor\Downloads\recipe-removebg-preview.png" Margin="0,0,273,0" Width="123" HorizontalAlignment="Right" Height="111" VerticalAlignment="Top"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="389*"/>
+            <RowDefinition Height="439*"/>
+        </Grid.RowDefinitions>
+        <Image Source="C:\Users\viktor\Downloads\recipe-removebg-preview.png" Margin="0,0,279,0" Width="123" HorizontalAlignment="Right" Height="111" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="51,27,0,0" TextWrapping="Wrap" Text="Receptina" VerticalAlignment="Top" Height="84" Width="352" FontSize="60" TextAlignment="Center" FontFamily="Helvetica"/>
 
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" Height="42" Width="352" FontSize="35" TextAlignment="Center" FontFamily="Helvetica" Margin="10,193,0,0"/>
 
 
-        <DataGrid x:Name ="dataGrid" Margin="54,240,54,285" SelectionChanged="dataGrid_SelectionChanged"></DataGrid>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Instructions" VerticalAlignment="Top" Height="42" Width="352" FontSize="35" TextAlignment="Center" FontFamily="Helvetica" Margin="10,600,0,0"/>
-        <TextBox x:Name ="ingredientName" Margin="54,557,164,233"></TextBox>
-        <Button Margin="250,557,54,233" Content="Add Ingredient" Click="Button_Click"></Button>
+        <DataGrid x:Name ="dataGrid" Margin="0,240,0,0" SelectionChanged="dataGrid_SelectionChanged" Height="303" VerticalAlignment="Top" Grid.RowSpan="2" HorizontalAlignment="Center" Width="282"></DataGrid>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Instructions" VerticalAlignment="Top" Height="42" Width="352" FontSize="35" TextAlignment="Center" FontFamily="Helvetica" Margin="10,211,0,0" Grid.Row="1"/>
+        <TextBox x:Name ="ingredientName" Margin="54,165,164,257" Grid.Row="1"></TextBox>
+        <Button Margin="260,162,32,254" Content="Add Ingredient" Click="Button_Click" Grid.Row="1"></Button>
 
-        <TextBlock Margin="66,662,66,10"><Run/><LineBreak/><Run/></TextBlock>
-        <TextBlock x:Name="recipeName" HorizontalAlignment="Center" TextWrapping="Wrap" Text="name_of)r" VerticalAlignment="Top" Height="86" Width="352" Foreground="White" FontSize="55" TextAlignment="Center" FontFamily="Helvetica" Margin="0,102,0,0"/>
+        <TextBox x:Name="instructions" Margin="66,253,66,71" TextChanged="instructions_TextChanged" Grid.Row="1"></TextBox>
+        <TextBlock x:Name="recipeName" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Placeholder" VerticalAlignment="Top" Height="86" Width="352" Foreground="White" FontSize="55" TextAlignment="Center" FontFamily="Helvetica" Margin="0,102,0,0"/>
 
+
+        <Button Margin="0,394,19,0" Background="Red" x:Name="deleteButton" Content="Delete" Click="deleteButton_Click" Height="40" VerticalAlignment="Top" HorizontalAlignment="Right" Width="111" Grid.Row="1"/>
+
+
+        <Button Margin="10,21,294,318" Opacity="0" Click="Button_Click_1"></Button>
     </Grid>
 </Window>

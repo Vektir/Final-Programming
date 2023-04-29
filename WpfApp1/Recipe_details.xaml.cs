@@ -29,6 +29,8 @@ namespace WpfApp1
 
 		public Recipe_details(string person_ID, string recipe_ID)
 		{
+			//deleteButton.Background = Background = new SolidColorBrush(Colors.Red);
+
 			InitializeComponent();
 			Person_ID = person_ID;
 			Recipe_ID = recipe_ID;
@@ -46,6 +48,8 @@ namespace WpfApp1
 			var a = command.ExecuteScalar();
 			recipeName.Text = a.ToString();
 			// neshto    
+
+			Display_Instructions();
 
 
 		}
@@ -112,8 +116,46 @@ namespace WpfApp1
 			//}
 			// (Exception ex) { MessageBox.Show(ex.ToString()); }
 
+		}
 
+		public void Display_Instructions()
+		{
+			SqlConnection sqlCon = new SqlConnection(connection);
+			sqlCon.Open();
+			string query = $"select instrcution from Recipes where ID = {Recipe_ID}";
 
+			SqlCommand command = new SqlCommand(query, sqlCon);
+			instructions.Text = command.ExecuteScalar().ToString();
+		}
+
+		private void instructions_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			SqlConnection sqlCon = new SqlConnection(connection);
+			sqlCon.Open();
+			string query = $"update Recipes set instrcution = '{instructions.Text}' where ID = {Recipe_ID}";
+
+			SqlCommand command = new SqlCommand(query, sqlCon);
+			command.ExecuteNonQuery();
+
+			sqlCon.Close();
+		}
+
+		private void deleteButton_Click(object sender, RoutedEventArgs e)
+		{
+			SqlConnection sqlCon = new SqlConnection(connection);
+			sqlCon.Open();
+			string query = $"delete from Recipes where ID = {Recipe_ID}";
+			SqlCommand command = new SqlCommand(query, sqlCon);
+			command.ExecuteNonQuery();
+
+			new Cook_Main_Screen(Person_ID).Show();
+			Close();
+		}
+
+		private void Button_Click_1(object sender, RoutedEventArgs e)
+		{
+			new Cook_Main_Screen(Person_ID).Show();
+			Close();
 		}
 	}
 }

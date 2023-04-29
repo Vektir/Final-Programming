@@ -1,16 +1,17 @@
-﻿<Window x:Class="WpfApp1.Cook_My_Recipes"
+﻿<Window x:Class="WpfApp1.GuestMain"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Cook_My_Recipes" Height="844" Width="390">
+        Title="GuestMain" Height="884" Width="390">
     <Grid Background="Purple">
         <Image Source="C:\Users\viktor\Downloads\recipe-removebg-preview.png" Margin="0,0,273,0" Width="123" HorizontalAlignment="Right" Height="111" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="51,27,0,0" TextWrapping="Wrap" Text="Receptina" VerticalAlignment="Top" Height="84" Width="352" FontSize="60" TextAlignment="Center" FontFamily="Helvetica"/>
-        <DataGrid x:Name="dataGrid" Margin="42,136,42,135" SelectionChanged="dataGrid_SelectionChanged" ></DataGrid>
 
-        <Button Margin="0,13,284,730" Opacity="0" Click="Button_Click"></Button>
+        <DataGrid x:Name="dataGrid" Margin="22,170,22,36" SelectionChanged="DataGrid_SelectionChanged"></DataGrid>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Recipe List" VerticalAlignment="Top" Height="86" Width="352" Foreground="White" FontSize="55" TextAlignment="Center" FontFamily="Helvetica" Margin="0,102,0,0"/>
+
     </Grid>
 </Window>

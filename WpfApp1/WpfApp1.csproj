@@ -207,6 +207,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GuestMain.xaml.cs">
+      <DependentUpon>GuestMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Guest_Recipe_Details.xaml.cs">
+      <DependentUpon>Guest_Recipe_Details.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Recipe_details.xaml.cs">
       <DependentUpon>Recipe_details.xaml</DependentUpon>
     </Compile>
@@ -215,6 +221,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Cook_My_Recipes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GuestMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Guest_Recipe_Details.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

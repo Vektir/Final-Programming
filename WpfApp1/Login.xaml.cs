@@ -65,6 +65,13 @@ namespace WpfApp1
 						new Cook_Main_Screen(command.ExecuteScalar().ToString()).Show();
 						Close();
 					}
+					else
+					{
+						query = $"select ID from Profiles where Username = '{username.Text}'";
+						command = new SqlCommand(query, sqlCon);
+						new GuestMain(command.ExecuteScalar().ToString()).Show();
+						Close();
+					}
 
 
 				}

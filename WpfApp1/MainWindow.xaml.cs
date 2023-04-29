@@ -29,6 +29,7 @@ namespace WpfApp1
 		{
 			new Login().Show();
 			Close();
-        }
-    }
+		}
+
+	}
 }

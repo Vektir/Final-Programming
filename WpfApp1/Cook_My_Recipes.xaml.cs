@@ -37,22 +37,6 @@ namespace WpfApp1
 			SqlConnection sqlCon = new SqlConnection(connection);
 			sqlCon.Open();
 
-			//SqlCommand command = new SqlCommand(query, sqlCon);
-			//command.CommandType = CommandType.Text;
-
-
-			//SqlDataReader reader = command.ExecuteReader();
-
-
-			//List<string> recipes= new List<string>();
-			//while( reader.Read())
-			//{
-			//	recipes.Add(reader[0].ToString());
-			//}
-
-			//MessageBox.Show(recipes[1]);
-
-
 			DataTable dataTable = new DataTable();
 
 			SqlDataAdapter dataAdapter = new SqlDataAdapter(query, sqlCon);
@@ -78,6 +62,12 @@ namespace WpfApp1
 			new Recipe_details(Cook_ID, value1.ToString()).Show();
 			Close();
 
+		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			new Cook_Main_Screen(Cook_ID).Show();
+			Close();
 		}
 	}
 }

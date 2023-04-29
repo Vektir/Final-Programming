@@ -28,7 +28,14 @@ namespace WpfApp1
 
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-			string query = $"insert into Profiles (Username,\"Password\", \"Role\") values ('{username.Text}', '{password.Password}', 'User')";
+
+			string Role = "Guest";
+			if (SecretKey.Text == "1234")
+			{
+				Role = "Cook";
+			}
+
+			string query = $"insert into Profiles (Username,\"Password\", \"Role\") values ('{username.Text}', '{password.Password}', '{Role}')";
 			SqlConnection sqlCon = new SqlConnection(connection);
 			try
 			{
@@ -44,5 +51,11 @@ namespace WpfApp1
 
 
 		}
-	}
+
+		private void Button_Click_1(object sender, RoutedEventArgs e)
+		{
+			new Login().Show();
+			Close();
+		}
+    }
 }

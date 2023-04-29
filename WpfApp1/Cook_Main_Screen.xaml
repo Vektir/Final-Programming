@@ -5,13 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Cook_Main_Screen" Height="844" Width="390">
-    <Grid Background="Purple" Margin="-2,0,2,0">
-        <Image Source="C:\Users\viktor\Downloads\recipe-removebg-preview.png" Margin="0,0,277,0" Width="119" HorizontalAlignment="Right" Height="106" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="51,27,0,0" TextWrapping="Wrap" Text="Receptina" VerticalAlignment="Top" Height="84" Width="352" FontSize="60" TextAlignment="Center" FontFamily="Helvetica"/>
+        Title="Cook_Main_Screen" Height="844" Width="420">
+    <Grid Background="Purple" Margin="0,0,0,0">
+        <Image Source="C:\Users\viktor\Downloads\recipe-removebg-preview.png" Margin="0,0,304,0" Width="119" HorizontalAlignment="Right" Height="106" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="68,27,0,0" TextWrapping="Wrap" Text="Receptina" VerticalAlignment="Top" Height="84" Width="352" FontSize="60" TextAlignment="Center" FontFamily="Helvetica"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="114" Width="416" FontSize="90" TextAlignment="Center" FontFamily="Helvetica" Foreground="White" Text="Welcome!"/>
         <Button Content="My Recipes" HorizontalAlignment="Center" VerticalAlignment="Top" Height="106" Width="284"  Margin="0,308,0,0" FontSize="50" Click="Button_Click"/>
-        <Button Content="Add Recipe" HorizontalAlignment="Center" VerticalAlignment="Top" Height="106" Width="284"  Margin="0,586,0,0" FontSize="50" Click="Button_Click_1"/>
+        <Button Content="Add Recipe" HorizontalAlignment="Center" VerticalAlignment="Top" Height="58" Width="198"  Margin="0,699,0,0" FontSize="33" Click="Button_Click_1"/>
 
+
+        <TextBox x:Name="newRecipeName" Margin="54,562,54,149" VerticalContentAlignment="Center" TextChanged="newRecipeName_TextChanged" HorizontalContentAlignment="Center" FontSize="40"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,508,0,0" TextWrapping="Wrap" Text="Name of new recipe" VerticalAlignment="Top" Height="49" Width="352" FontSize="37" TextAlignment="Center" FontFamily="Helvetica" Foreground="White"/>
     </Grid>
 </Window>

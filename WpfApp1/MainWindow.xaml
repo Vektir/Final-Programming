@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="844" Width="390">
     <Grid Background="Purple">
-        <Button Height="NaN" Margin="10,603,217,170" Width="NaN" Click="Button_Click" Content="User" FontSize="25"></Button>
+        <Button Height="NaN" Margin="-474,593,701,180" Width="NaN" Click="Button_Click" Content="User" FontSize="25"></Button>
         <Image Source="C:\Users\viktor\Downloads\recipe-removebg-preview.png" Height="NaN" Margin="44,204,44,275" Width="NaN"></Image>
-        <Button Height="NaN" Margin="217,603,10,170" Width="NaN" Click="Button_Click" Content="Cook" FontSize="25"/>
+        <Button Height="NaN" Margin="27,608,27,107" Width="NaN" Click="Button_Click" Content="Enter" FontSize="25"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,78,0,0" TextWrapping="Wrap" Text="Receptina" VerticalAlignment="Top" Height="84" Width="352" FontSize="70" TextAlignment="Center" FontFamily="Helvetica"/>
     </Grid>
 </Window>
